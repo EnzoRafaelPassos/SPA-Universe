@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", serif;
+}
+
+#toggle-menu,
+label {
+    display: none;
+}
+
+:root {
+    font-size: 62.5%;
+    --color-text-primary: #E1E1E6;
+    --color-text-navs-primary: #C4C4CC;
+    --color-text-navs-secondary: #FFFFFF;
+}
+
+
+header,
+header ul {
+    display: flex;
+    gap: 3.3rem;
+}
+
+header {
+    padding: 4.0rem 7.2rem;
+    display: flex;
+    align-items: center;
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 6.3rem;
+    animation: none;
+}
+
+header li {
+    list-style: none;
+}
+
+header li a {
+    color: var(--color-text-navs-primary);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+header li a:hover {
+    color: var(--color-text-navs-secondary);
+}
+
+#app {
+    padding: 0 10.2rem;
+    animation: move 0.5s ease-out forwards;
+}
+
+
+h1 {
+    font-weight: bold;
+    font-size: clamp(2.2rem, 7vw, 4.8rem);
+    color: var(--color-text-primary);
+    margin-bottom: 2.4rem;
+}
+
+p {
+    font-size: 1.8rem;
+    line-height: 160%;
+    color: var(--color-text-primary);
+}
+
+.container {
+    animation: move 0.5s ease-out forwards;
+    max-width: 76.8rem;
+    
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(-5.0rem);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    header {
+        justify-content: space-between;
+    }
+
+    label {
+        color: var(--color-text-navs-secondary);
+        display: block;
+        right: 7.2rem;
+        z-index: 2;
+    }
+
+    nav {
+        display: grid;
+        position: absolute;
+       
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+        
+        opacity: 0;
+        visibility: hidden;
+        
+    }
+
+    nav ul {
+        flex-direction: column;
+
+
+    }
+
+
+
+    #toggle-menu:checked+nav {
+        display: flex;
+        animation: showMenu 0.5s ease forwards;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        max-height: 70%;
+    }
+
+    @keyframes showMenu {
+        0% {
+            transform: translateY(-10.0rem);
+         
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+            background-color: rgba(4, 31, 43, 0.9);
+        }
+    }
+
+
+
+}
