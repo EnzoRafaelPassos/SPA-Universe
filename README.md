@@ -30,4 +30,4 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 Esse site é basicamente em fins de aprendizado onde desenvolvi um sita em SPA - Single Page Aplication, onde consegui entender melhor e me aprofundar mais em JS.
 
-- [Visite o projeto online](https://enzorafaelpassos.github.io/SPA-Universe/)
+- [Visite o projeto online](https://enzorafaelpassos.github.io/SPA-Universe/)# SPA-Universe
