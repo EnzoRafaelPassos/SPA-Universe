@@ -5,6 +5,7 @@
 }
 
 body {
+    height: 100vh;
     font-family: "Roboto", serif;
 }
 
@@ -18,6 +19,7 @@ label {
     --color-text-primary: #E1E1E6;
     --color-text-navs-primary: #C4C4CC;
     --color-text-navs-secondary: #FFFFFF;
+    --bg-menu: rgba(4, 31, 43, 0.9);
 }
 
 
@@ -89,6 +91,12 @@ p {
 
 
 @media screen and (max-width: 768px) {
+    #app {
+        padding: 0 4rem ;
+    }
+    body{
+        background-size: auto;
+    }
 
     header {
         justify-content: space-between;
@@ -131,6 +139,14 @@ p {
         justify-content: center;
         text-align: center;
         max-height: 70%;
+    }
+
+    .container {
+       max-height: 35.0rem;
+       width: 100%;
+       overflow-y: scroll;
+       scrollbar-color:   var(--color-text-navs-primary) var(--bg-menu);
+       padding: .4rem;
     }
 
     @keyframes showMenu {
